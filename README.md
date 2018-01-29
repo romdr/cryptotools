@@ -11,6 +11,8 @@ Currently features:
 
 Fetches historical data from binance and inspects the volatility of symbols by looking at how many times they hit highs and lows. Highs and lows are considered when the price goes over a threshold relative to the average price over the observed time period.
 
+To determine the number of highs and lows during the time period, candlesticks are observed from oldest to newest, and each time the closing price is over a threshold, the number of hits is incremented by one. Each subsequent tick that is continuously above the threshold isn't counted as a hit. Another hit will be counted once the closing price falls back below the threshold and crosses it again after that. This is closer to an edge detection, not the time spent above thresholds.
+
 
 ## Usage
 
@@ -58,7 +60,7 @@ You need to have an account on Binance, create a (read-only) API key, and enter 
 ## Dependencies
 
 ```
-$ pip install binance
+$ pip install python-binance
 ```
 
 
