@@ -1,4 +1,4 @@
-cryptotools
+cryptotools [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=shazbits_cryptotools&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=shazbits_cryptotools)
 ===========
 
 Crypto trading command line utilities.
